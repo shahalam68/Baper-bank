@@ -12,4 +12,11 @@ document.getElementById('deposit-button').addEventListener('click',function(){
     depositTotal.innerText = newDepositTotal;
     depositInput.value ='';
     // update account balance
+    const balanceTotal = document.getElementById('balance-total');
+    const balanceTotalText = balanceTotal.innerText;
+    const previousBalanceTotal = parseFloat(balanceTotalText);
+    const newBalanceTotal = previousBalanceTotal + newDepositTotal;
+    balanceTotal.innerText = newBalanceTotal; 
 });
+
+// Handle withdraw
